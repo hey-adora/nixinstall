@@ -1,10 +1,10 @@
 #!/bin/sh
 
 sudo mount -o remount,size=10G,noatime /nix/.rw-store
-nixos-generate-config --root . --no-filesystems
-cp ./etc/nixos/hardware-configuration.nix hardware-configuration.nix
-rm ./etc/nixos/configuration.nix 
-rm ./etc/nixos/hardware-configuration.nix
-rmdir ./etc/nixos
-rmdir ./etc
-sudo nix --experimental-features "nix-command flakes" run 'github:nix-community/disko/latest#disko-install' --  --flake '.#b650' --disk main /dev/vda
+sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./disk-config_ef00.nix 
+sudo nixos-generate-config --root /mnt
+sudo rm /mnt/etc/nixos/configuration.nix
+sudo cp configuration.nix /mnt/etc/nixos/configuration.nix
+sudo cp home.nix /mnt/etc/nixos/home.nix
+sudo cp flake.nix /mnt/etc/nixos/flake.nix
+sudo nixos-install

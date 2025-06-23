@@ -42,18 +42,13 @@
   # services.xserver.displayManager.sddm.enable = true;
   # services.xserver.displayManager.sddm.wayland.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = false;
-  services.xserver.desktopManager.gnome.enable = false;
-  services.gnome.gnome-browser-connector.enable = false;
+  # services.pipewire.enable = true;
+  # services.pipewire.pulse.enable = true;
+  # services.pipewire.alsa.enable = true;
+  # services.pipewire.alsa.support32Bit = true;
+  # services.pipewire.jack.enable = true;
 
-  services.pipewire.enable = true;
-  services.pipewire.pulse.enable = true;
-  services.pipewire.alsa.enable = true;
-  services.pipewire.alsa.support32Bit = true;
-  services.pipewire.jack.enable = true;
-
-  services.libinput.enable = true;
+  # services.libinput.enable = true;
 
   programs.zsh.enable = true;
 
