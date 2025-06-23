@@ -7,4 +7,4 @@ rm ./etc/nixos/configuration.nix
 rm ./etc/nixos/hardware-configuration.nix
 rmdir ./etc/nixos
 rmdir ./etc
-sudo nix --experimental-features "nix-command flakes" run 'github:nix-community/disko/latest#disko-install' --  --flake '.#b650'
+sudo nix --experimental-features "nix-command flakes" run 'github:nix-community/disko/latest#disko-install' --  --flake '.#b650' --disk main /dev/vda
