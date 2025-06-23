@@ -10,7 +10,7 @@
       nixpkgs,
     }:
     {
-      nixosConfigurations.mymachine = nixpkgs.legacyPackages.x86_64-linux.nixos [
+      nixosConfigurations.b650 = nixpkgs.legacyPackages.x86_64-linux.nixos [
         ./configuration.nix
         disko.nixosModules.disko
         {
