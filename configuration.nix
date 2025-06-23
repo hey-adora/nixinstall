@@ -26,7 +26,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "b650";.
+  networking.hostName = "b650";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Paris";
@@ -71,7 +71,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-     zsh
+    zsh
   ];
 
   system.stateVersion = "25.11"; # Did you read the comment?
