@@ -61,7 +61,8 @@
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      #home-manager
+      fish
+      curl
     ];
   };
 
